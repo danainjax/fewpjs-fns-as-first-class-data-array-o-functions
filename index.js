@@ -1,0 +1,56 @@
+function wakeDog(dogName, dogBreed) {
+  console.log(`Wake ${dogName} the ${dogBreed}`);
+  return `Wake ${dogName} the ${dogBreed}`
+}
+wakeDog('Fluffy', 'Bichon Frise');
+
+function leashDog(dogName, dogBreed) {
+    console.log(`Leash ${dogName} the ${dogBreed}`);
+    return `Leash ${dogName} the ${dogBreed}`
+}
+
+leashDog('Bowser', 'pug');
+
+function walkToPark(dogName, dogBreed) {
+    console.log(`Walk to the park with ${dogName} the ${dogBreed}`);
+    return `Walk to the park with ${dogName} the ${dogBreed}`
+}
+
+walkToPark('Lassie', 'border collie');
+
+function throwFrisbee(dogName, dogBreed) {
+    console.log(`Throw the frisbee for ${dogName} the ${dogBreed}`);
+    return `Throw the frisbee for ${dogName} the ${dogBreed}`
+}
+
+throwFrisbee('Max', 'golden retriever');
+
+function walkHome(dogName, dogBreed) {
+    console.log(`Walk home with ${dogName} the ${dogBreed}`);
+    return `Walk home with ${dogName} the ${dogBreed}`
+}
+walkHome('Smalls', 'mutt');
+
+function unleashDog(dogName, dogBreed) {
+    console.log(`Unleash ${dogName} the ${dogBreed}`);
+    return `Unleash ${dogName} the ${dogBreed}`
+}
+unleashDog('Joop', 'Yorkie');
+
+const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog];
+
+function exerciseDog(dogName, dogBreed) {
+    return routine.map(element => element(dogName, dogBreed) )
+
+}
+
+exerciseDog('Sylvie', 'Boxer');
+
+
+// The function's implementation should
+
+// * Iterate over the `routine` `Array`
+// * Call each function in the array and
+// * pass the `dogName` and `dogBreed` received by `exerciseDog()` to the function as they are _called_
+// * capture the result of each function's call
+// * return an `Array` of all those functions' return values
